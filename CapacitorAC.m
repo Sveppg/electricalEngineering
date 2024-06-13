@@ -15,7 +15,7 @@ I0 = 1; % Maximaler Strom (Amplitude)
 u = U0 * sin(omega * t);
 
 % Stromkurve (Sinusfunktion, um 90° phasenverschoben)
-i = I0 * sin(omega * t + pi / 2);
+i = I0 * sin(omega * t - pi / 2);
 
 % Plot
 figure;
@@ -24,7 +24,7 @@ plot(t, u, 'b', 'DisplayName', 'Spannung u(t)');
 plot(t, i, 'r', 'DisplayName', 'Strom i(t)');
 xlabel('Zeit (s)');
 ylabel('Amplitude');
-title('Spannung und Strom eines induktiven Blindwiderstands');
+title('Spannung und Strom eines kapazitiven Blindwiderstands');
 legend;
 grid on;
 hold off;
